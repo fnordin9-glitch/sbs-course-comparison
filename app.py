@@ -21,7 +21,7 @@ MAX_UPLOAD_BYTES = 8 * 1024 * 1024
 BATCH_SIZE = 8
 MAX_SELECTED = 32
 MAX_ANALYSES_SESSION = 3
-MODEL = "gemini-2.5-flash"
+MODEL = "gemini-3.8-flash"
 
 st.set_page_config(page_title="SBS Course Comparison", page_icon="🎓", layout="centered")
 st.title("SBS Course Comparison")
