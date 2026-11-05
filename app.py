@@ -181,7 +181,8 @@ if st.button("Compare courses", type="primary", disabled=not(bool(chosen) and fo
             if not reply.text:
                 raise RuntimeError("The AI returned no text.")
             responses.append(([c.code for c in batch], reply.text))
-        except Exception:
+        except Exception as exc:
+    print(f"Comparison failed: {type(exc).__name__}: {exc}", flush=True)
             # Avoid showing raw provider errors in the student UI or storing the upload.
             st.error("The analysis could not be completed. A service quota, unreadable reference PDF, or temporary API issue may be responsible. Contact the SBS administrator.")
             failed = True
