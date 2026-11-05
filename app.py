@@ -173,8 +173,7 @@ if st.button("Compare courses", type="primary", disabled=not(bool(chosen) and fo
                     model=MODEL,
                     contents=prompt,
                     config=types.GenerateContentConfig(
-                        system_instruction=SYSTEM_INSTRUCTION,
-                        temperature=0.2,
+                        system_instruction=SYSTEM_INSTRUCTION
                         max_output_tokens=4500,
                     ),
                 )
