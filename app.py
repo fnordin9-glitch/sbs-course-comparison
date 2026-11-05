@@ -172,8 +172,8 @@ if st.button("Compare courses", type="primary", disabled=not(bool(chosen) and fo
                 reply = model_client.models.generate_content(
                     model=MODEL,
                     contents=prompt,
-                    config=types.GenerateContentConfig(
-                        system_instruction=SYSTEM_INSTRUCTION
+                   config=types.GenerateContentConfig(
+                        system_instruction=SYSTEM_INSTRUCTION,
                         max_output_tokens=4500,
                     ),
                 )
